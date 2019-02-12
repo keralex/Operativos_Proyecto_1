@@ -16,6 +16,11 @@ public class Operativos1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        CocinaVista vista=new CocinaVista();
+        vista.setVisible(true);
+       
+        
     }
     
 }
