@@ -5,6 +5,8 @@
  */
 package operativos1;
 
+import java.io.IOException;
+
 /**
  *
  * @author kagua
@@ -23,12 +25,18 @@ public class Cocina {
     int cantCocinerosFuerte;
     int cantMesoneros;
     int horasTrabajo;
-      
+    String filename="C:\\Users\\kagua\\Documents\\NetBeansProjects\\Operativos_Proyecto_1\\src\\operativos1\\text.txt";
+    LeerArchivos archivos;
+ 
     
-    public Cocina() {
+    
+    
+    
+    
+    public Cocina() throws IOException {
+        this.archivos = new LeerArchivos(this.filename);
         
     }
-    
     
     
     

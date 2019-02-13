@@ -9,13 +9,31 @@ package operativos1;
  *
  * @author kagua
  */
-public class CocineroEntrada extends Cocinero{
+public class CocineroEntrada extends Cocinero {
 
+    //constructor
     public CocineroEntrada() {
                 this.mesones=new Meson[this.capacidadMeson];
 
     }
-
+    
+    
+    //Funcionews
+    
+    
+    public void cocinar(){
+        System.out.println("cocinero de entrada cocina");
+    }
+    
+    public void esperarSegundos(int segundos) throws InterruptedException{
+        try{
+            Thread.sleep(segundos * 1000);
+        }catch(InterruptedException ex){
+            Thread.currentThread().interrupt();
+        }
+    }
+    
+    //Getters y Setters
     public int getCapacidadMeson() {
         return capacidadMeson;
     }
