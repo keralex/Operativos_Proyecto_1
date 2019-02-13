@@ -82,18 +82,16 @@ public class CocinaVista extends javax.swing.JFrame {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
-                {null, null},
-                {null, null},
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                " Puesto", "Cantidad"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 170, 210, 260);
+        jScrollPane1.setBounds(40, 170, 210, 60);
 
         jLabel2.setText(" Cantidad Cocineros y mesoneros Activos");
         jPanel1.add(jLabel2);
@@ -101,7 +99,7 @@ public class CocinaVista extends javax.swing.JFrame {
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator1);
-        jSeparator1.setBounds(530, 80, 40, 360);
+        jSeparator1.setBounds(530, 80, 40, 180);
 
         jLabel3.setText("Cantidad de platos en los mesones");
         jPanel1.add(jLabel3);
@@ -113,15 +111,15 @@ public class CocinaVista extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Puesto", "Cant Mesones"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(290, 170, 230, 260);
+        jScrollPane2.setBounds(290, 170, 230, 60);
         jPanel1.add(jSeparator2);
-        jSeparator2.setBounds(10, 460, 1180, 10);
+        jSeparator2.setBounds(20, 300, 1180, 10);
 
         jLabel4.setText("Cantidad de Ordenes atentidas");
         jPanel1.add(jLabel4);
@@ -129,21 +127,20 @@ public class CocinaVista extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null}
+                {null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Cantidad"
             }
         ));
         jScrollPane3.setViewportView(jTable3);
 
         jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(550, 170, 230, 260);
+        jScrollPane3.setBounds(550, 170, 230, 40);
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator3);
-        jSeparator3.setBounds(820, 80, 40, 360);
+        jSeparator3.setBounds(820, 80, 40, 170);
 
         jLabel5.setText("Estado de mesonero en jefe y estados");
         jPanel1.add(jLabel5);
@@ -155,13 +152,13 @@ public class CocinaVista extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Puestos", "Estado"
             }
         ));
         jScrollPane4.setViewportView(jTable4);
 
         jPanel1.add(jScrollPane4);
-        jScrollPane4.setBounds(840, 170, 230, 260);
+        jScrollPane4.setBounds(840, 170, 230, 60);
 
         jLabel6.setText("Horas Para terminar:");
         jPanel1.add(jLabel6);
@@ -179,27 +176,27 @@ public class CocinaVista extends javax.swing.JFrame {
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator4);
-        jSeparator4.setBounds(260, 490, 20, 170);
+        jSeparator4.setBounds(260, 390, 20, 170);
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator5);
-        jSeparator5.setBounds(260, 80, 40, 360);
+        jSeparator5.setBounds(260, 80, 40, 180);
 
         jLabel7.setText("Contrata o despide mesoneros");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 480, 200, 14);
+        jLabel7.setBounds(30, 380, 200, 14);
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator6);
-        jSeparator6.setBounds(530, 480, 20, 180);
+        jSeparator6.setBounds(530, 380, 20, 180);
 
         jLabel10.setText("Contrata o despide cocineros");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(280, 480, 240, 14);
+        jLabel10.setBounds(280, 380, 240, 14);
 
         jLabel12.setText("Agrega meson a cocineros");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(550, 470, 240, 14);
+        jLabel12.setBounds(550, 370, 240, 14);
 
         jButton1.setText("Despide");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +205,7 @@ public class CocinaVista extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(150, 570, 80, 30);
+        jButton1.setBounds(150, 470, 80, 30);
 
         jButton2.setText("Contrata");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +214,7 @@ public class CocinaVista extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(30, 570, 90, 30);
+        jButton2.setBounds(30, 470, 90, 30);
 
         jButton6.setText("Contrata");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +223,7 @@ public class CocinaVista extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(300, 600, 90, 30);
+        jButton6.setBounds(300, 500, 90, 30);
 
         jButton9.setText("Despide");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -235,9 +232,9 @@ public class CocinaVista extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(420, 600, 80, 30);
+        jButton9.setBounds(420, 500, 80, 30);
         jPanel1.add(jSpinner2);
-        jSpinner2.setBounds(580, 570, 29, 30);
+        jSpinner2.setBounds(580, 470, 29, 30);
 
         jButton10.setText("Agregar");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -246,32 +243,31 @@ public class CocinaVista extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton10);
-        jButton10.setBounds(660, 570, 80, 30);
+        jButton10.setBounds(660, 470, 80, 30);
         jPanel1.add(jSpinner3);
-        jSpinner3.setBounds(580, 570, 29, 30);
+        jSpinner3.setBounds(580, 470, 29, 30);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(560, 510, 180, 20);
+        jComboBox1.setBounds(560, 410, 180, 20);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(300, 540, 180, 20);
+        jComboBox2.setBounds(300, 440, 180, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1210, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 711, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         pack();
