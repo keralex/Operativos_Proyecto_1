@@ -21,9 +21,8 @@ public class Operativos1 {
         
         CocinaVista vista=new CocinaVista();
         vista.setVisible(true);
-        String filename="C:\\Users\\kagua\\Documents\\NetBeansProjects\\Operativos_Proyecto_1\\src\\operativos1\\text.txt";
-        LeerArchivos archivos=new LeerArchivos(filename);
-        System.out.println(archivos.cant_Horas_Mesonero);
+        Cocina cocina=new Cocina();
+        
         
        
         
