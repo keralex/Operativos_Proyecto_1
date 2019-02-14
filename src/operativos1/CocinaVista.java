@@ -16,6 +16,7 @@ public class CocinaVista extends javax.swing.JFrame {
 
     private JTextField jTextField8;
     private JTextField jTextField6;
+    private JTextField jTextField9;
     
         public JTextField getjTextField8() {
         return jTextField8;
@@ -31,6 +32,14 @@ public class CocinaVista extends javax.swing.JFrame {
     
     public void setjTextField6(JTextField jTextField6) {
         this.jTextField6 = jTextField6;
+    }
+    
+        public JTextField getjTextField9() {
+        return jTextField9;
+    }
+    
+    public void setjTextField9(JTextField jTextField9) {
+        this.jTextField9 = jTextField9;
     }
     
     

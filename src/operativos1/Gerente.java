@@ -5,10 +5,65 @@
  */
 package operativos1;
 
+
+import operativos1.CocinaVista;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author kagua
  */
-public class Gerente {
-    
+public class Gerente extends Thread {
+
+    private final int horas;
+    private volatile boolean corriendo;
+    JefeMesonero jefemesonero;
+    CocinaVista CocinaVista;
+
+    public Gerente(int hora, CocinaVista CocinaVista, JefeMesonero jefemesonero) {
+        this.corriendo = false;
+        this.horas = hora;
+        this.CocinaVista = CocinaVista;
+        this.jefemesonero = jefemesonero;
+    }
+
+    @Override
+    public void run() {
+        synchronized (this) {
+            do {
+
+                CocinaVista.getjTextField9().setText("Gerente Duerme");
+                Random r = new Random();
+                int rand = r.nextInt(( 27 * horas / 120) - (horas / 120) + 1) + (horas / 120);
+                CocinaVista.getjTextField9().setText("Gerente Despierto"); //Durmiendo, despierta
+
+                try {
+                    Thread.sleep(rand * 1000);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Gerente.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (corriendo == false) {
+
+                    try {
+                        this.wait();
+
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Gerente.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            } while (corriendo);
+        }
+
+    }
+
+    public boolean isCorriendo() {
+        return corriendo;
+    }
+
+    public void setCorriendo(boolean corriendo) {
+        this.corriendo = corriendo;
+    }
 }
+
