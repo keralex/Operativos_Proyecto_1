@@ -5,11 +5,35 @@
  */
 package operativos1;
 
+import operativos1.Gerente;
+import javax.swing.JTextField;
+
 /**
  *
  * @author kagua
  */
 public class CocinaVista extends javax.swing.JFrame {
+
+    private JTextField jTextField8;
+    private JTextField jTextField6;
+    
+        public JTextField getjTextField8() {
+        return jTextField8;
+    }
+    
+    public void setjTextField8(JTextField jTextField8) {
+        this.jTextField8 = jTextField8;
+    }
+    
+        public JTextField getjTextField6() {
+        return jTextField6;
+    }
+    
+    public void setjTextField6(JTextField jTextField6) {
+        this.jTextField6 = jTextField6;
+    }
+    
+    
 
     /**
      * Creates new form CocinaVista
@@ -338,4 +362,4 @@ public class CocinaVista extends javax.swing.JFrame {
     private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-}
+
