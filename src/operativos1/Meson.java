@@ -10,5 +10,40 @@ package operativos1;
  * @author kagua
  */
 public class Meson {
-    boolean ocupado;
+        private int[] meson;
+        private int tamaño;
+
+    public Meson(int tamaño) {
+       
+        this.tamaño = tamaño;
+        
+    }
+
+    public int[] getMeson() {
+        return meson;
+    }
+
+    public void setMeson(int[] meson) {
+        this.meson = meson;
+    }
+
+    public int getTamaño() {
+        return tamaño;
+    }
+
+    public void setTamaño(int tamaño) {
+        this.tamaño = tamaño;
+    }
+        public int getVec(int i,int val) {
+        return meson[i]=val;
+    }
+
+    public void setVec(int i, int val) {
+        this.meson[i] = val;
+    }
+    
+
+   
+        
+
 }

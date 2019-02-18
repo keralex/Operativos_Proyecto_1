@@ -31,10 +31,10 @@ public class LeerArchivos {
         int cant_max_CocinerosEntradas;
         int cant_mesoneros;
         int cant_max_mesoneros;
-        float cant_Horas_CocineroPostre;
-        float cant_Horas_CocineroFuerte;
-        float cant_Horas_CocineroEntrada;
-        float cant_Horas_Mesonero;
+        int cant_Horas_CocineroPostre;
+        int cant_Horas_CocineroFuerte;
+        int cant_Horas_CocineroEntrada;
+        int cant_Horas_Mesonero;
 
 
     public LeerArchivos(String namefile) throws IOException{
@@ -69,13 +69,13 @@ public class LeerArchivos {
                      break;
             case 12:  this.cant_max_mesoneros= Integer.parseInt(line);
                      break;
-            case 13:  this.cant_Horas_CocineroPostre = Float.valueOf(line);
+            case 13:  this.cant_Horas_CocineroPostre = Integer.parseInt(line);
                      break;
-            case 14:  this.cant_Horas_CocineroFuerte = Float.valueOf(line);
+            case 14:  this.cant_Horas_CocineroFuerte =Integer.parseInt(line);
                      break;
-            case 15:  this.cant_Horas_CocineroEntrada = Float.valueOf(line);
+            case 15:  this.cant_Horas_CocineroEntrada = Integer.parseInt(line);
                      break;
-            case 16:  this.cant_Horas_Mesonero= Float.valueOf(line);
+            case 16:  this.cant_Horas_Mesonero= Integer.parseInt(line);
                      break;
 
 
@@ -192,7 +192,7 @@ public class LeerArchivos {
         return cant_Horas_CocineroPostre;
     }
 
-    public void setCant_Horas_CocineroPostre(float cant_Horas_CocineroPostre) {
+    public void setCant_Horas_CocineroPostre(int cant_Horas_CocineroPostre) {
         this.cant_Horas_CocineroPostre = cant_Horas_CocineroPostre;
     }
 
@@ -200,7 +200,7 @@ public class LeerArchivos {
         return cant_Horas_CocineroFuerte;
     }
 
-    public void setCant_Horas_CocineroFuerte(float cant_Horas_CocineroFuerte) {
+    public void setCant_Horas_CocineroFuerte(int cant_Horas_CocineroFuerte) {
         this.cant_Horas_CocineroFuerte = cant_Horas_CocineroFuerte;
     }
 
@@ -208,7 +208,7 @@ public class LeerArchivos {
         return cant_Horas_CocineroEntrada;
     }
 
-    public void setCant_Horas_CocineroEntrada(float cant_Horas_CocineroEntrada) {
+    public void setCant_Horas_CocineroEntrada(int cant_Horas_CocineroEntrada) {
         this.cant_Horas_CocineroEntrada = cant_Horas_CocineroEntrada;
     }
         

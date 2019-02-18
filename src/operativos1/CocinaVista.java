@@ -5,6 +5,7 @@
  */
 package operativos1;
 
+import java.io.IOException;
 import operativos1.Gerente;
 import javax.swing.JTextField;
 
@@ -43,13 +44,19 @@ public class CocinaVista extends javax.swing.JFrame {
     }
     
     
+    // ATRIBUTOS
+    
+    Cocina cocina;
+    
 
     /**
      * Creates new form CocinaVista
      */
-    public CocinaVista() {
+    public CocinaVista() throws IOException {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setVisible(false);
+        this.cocina=new Cocina();
     }
 
     /**
