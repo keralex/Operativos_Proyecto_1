@@ -12,11 +12,12 @@ package operativos1;
 public class Meson {
         private int[] meson;
         private int tamaño;
+        
 
     public Meson(int tamaño) {
        
         this.tamaño = tamaño;
-        
+        this.meson=new int[this.tamaño];
     }
 
     public int[] getMeson() {

@@ -49,7 +49,7 @@ public class Cocina  {
 
 
     int horasRestaurant;
-    String filename="C:\\Users\\kagua\\Documents\\NetBeansProjects\\Operativos_Proyecto_1\\src\\operativos1\\text.txt";
+    String filename="C:\\Users\\artur\\OneDrive\\Documents\\NetBeansProjects\\Operativos_Proyecto_1\\src\\operativos1\\text.txt";
     LeerArchivos archivos;
  
     
@@ -82,6 +82,7 @@ public class Cocina  {
          semaProductores=new Semaphore(this.cantMesonesEntradas);
          semaConsumidores=new Semaphore(0);
          semaExclusividad=new Semaphore(1);     
+         
          
     
         

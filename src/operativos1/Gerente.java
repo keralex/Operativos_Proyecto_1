@@ -37,8 +37,9 @@ public class Gerente extends Thread {
                 CocinaVista.getjTextField9().setText("Gerente Duerme");
                 Random r = new Random();
                 int rand = r.nextInt(( 27 * horas / 120) - (horas / 120) + 1) + (horas / 120);
-                CocinaVista.getjTextField9().setText("Gerente Despierto"); //Durmiendo, despierta
-
+                CocinaVista.getjTextField9().setText("Gerente Despierto"); //Durmiendo, despierta 
+                //int numero = (int)(Math.random()*(200-45+1)+45);
+                //float numero = (float)(Math.random()*(2-0.45+0.1)+0.45);  //verificar calculos de descanso 27 min equivalen a 0.45 horas y 120 min a 2 horas
                 try {
                     Thread.sleep(rand * 1000);
                 } catch (InterruptedException ex) {
