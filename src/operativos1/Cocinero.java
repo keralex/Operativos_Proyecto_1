@@ -19,6 +19,7 @@ public class Cocinero extends Thread {
     private Semaphore SExclusividad;
     private Semaphore SProductor;
     private Semaphore SConsumidor;
+      private Semaphore SImpresion;
     //atributos
 
     private Meson mesones;
@@ -31,7 +32,7 @@ public class Cocinero extends Thread {
     
     
     //constructor
-    public Cocinero(Semaphore SP, Semaphore SE, Semaphore SC, float horas, String tipo, Meson meson, int apuntador, int val) {
+    public Cocinero(Semaphore SP, Semaphore SE, Semaphore SC, float horas, String tipo, Meson meson, int apuntador, int val,Semaphore sI) {
                
                 this.SConsumidor=SC;
                 this.SExclusividad=SE;
@@ -41,11 +42,13 @@ public class Cocinero extends Thread {
                 this.mesones=meson;
                 this.apuntador=apuntador;
                 this.val=val;
+                this.SImpresion=sI;
+                  
 
     }
     
     
-    //Funciones
+    //Funciones*****************
     
     //Cocina
     public void cocinar(){
@@ -65,7 +68,6 @@ public class Cocinero extends Thread {
     //Deja en el meson la comida
     public void DejarComida(){
         System.out.println("entro a dejar comida");
-        System.out.println("");
         mesones.setVec(this.apuntador, val);
         
         this.apuntador=(this.apuntador+1)%mesones.getTamaño();
@@ -85,17 +87,15 @@ public class Cocinero extends Thread {
         }
     }
     
-    //Public Void run y star 
+    //Public Void run y start   *************************************************************
     
     public void run(){
         
         while(ejecutar){
            try {
                 SProductor.acquire();
-                System.out.println("acquire productor");
-                this.cocinar();
                 SExclusividad.acquire(); 
-                System.out.println("acquiere exclusividad");
+                this.cocinar();
                 this.DejarComida();
                 SExclusividad.release();
                 SConsumidor.release();
@@ -103,6 +103,13 @@ public class Cocinero extends Thread {
                 } catch (InterruptedException ex) {
                 Logger.getLogger(Cocinero.class.getName()).log(Level.SEVERE, null, ex);
             }
+           try{
+               SImpresion.acquire();
+           }catch (InterruptedException ex) {
+                Logger.getLogger(Cocinero.class.getName()).log(Level.SEVERE, null, ex);
+            }
+           this.mesones.imprimir();
+           SImpresion.release();
                          
 
          

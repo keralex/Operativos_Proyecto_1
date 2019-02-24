@@ -11,13 +11,13 @@ package operativos1;
  */
 public class Meson {
         private int[] meson;
-        private int tamaño;
+        private int tam;
         
 
-    public Meson(int tamaño) {
+    public Meson(int tam) {
        
-        this.tamaño = tamaño;
-        this.meson=new int[this.tamaño];
+        this.tam= tam;
+        this.meson=new int[this.tam];
     }
 
     public int[] getMeson() {
@@ -29,11 +29,11 @@ public class Meson {
     }
 
     public int getTamaño() {
-        return tamaño;
+        return tam;
     }
 
     public void setTamaño(int tamaño) {
-        this.tamaño = tamaño;
+        this.tam = tamaño;
     }
         public int getVec(int i,int val) {
         return meson[i]=val;
@@ -43,7 +43,13 @@ public class Meson {
         this.meson[i] = val;
     }
     
-
+    public void imprimir(){
+        for(int i=0; i<tam; i++){
+            System.out.print(meson[i]+" ");
+        }
+        System.out.println("");
+    }
+    
    
         
 

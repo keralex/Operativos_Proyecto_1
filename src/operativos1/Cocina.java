@@ -46,10 +46,10 @@ public class Cocina  {
     private Semaphore semaProductores;
     private Semaphore semaConsumidores;
     private Semaphore semaExclusividad;
-
+    private Semaphore semaImpresion;
 
     int horasRestaurant;
-    String filename="C:\\Users\\artur\\OneDrive\\Documents\\NetBeansProjects\\Operativos_Proyecto_1\\src\\operativos1\\text.txt";
+    String filename="C:\\Users\\kagua\\Desktop\\Operativos1\\src\\operativos1\\text.txt";
     LeerArchivos archivos;
  
     
@@ -81,7 +81,8 @@ public class Cocina  {
          //semaforos de cocinero entrada
          semaProductores=new Semaphore(this.cantMesonesEntradas);
          semaConsumidores=new Semaphore(0);
-         semaExclusividad=new Semaphore(1);     
+         semaExclusividad=new Semaphore(1);
+         semaImpresion=new Semaphore(1);
          
          
     
@@ -96,14 +97,12 @@ public class Cocina  {
         //inicializar cocineros 
         for(int i=0;i<this.cocinerosEntrada.length;i++){
             
-           this.cocinerosEntrada[i]=new Cocinero(this.semaProductores,this.semaExclusividad,this.semaConsumidores,this.horaCocinerosEntrada,"Entrada",this.mesonEntrada,this.apuntador,1);
+           this.cocinerosEntrada[i]=new Cocinero(this.semaProductores,this.semaExclusividad,this.semaConsumidores,this.horaCocinerosEntrada,"Entrada",this.mesonEntrada,this.apuntador,1,this.semaImpresion);
            this.cocinerosEntrada[i].start();
-           
            
         }
        
-       //this.cocineroPrueba=new Cocinero(this.semaProductores,this.semaExclusividad,this.semaConsumidores,this.horaCocinerosEntrada,"Entrada",this.mesonEntrada,this.apuntador,1);
-       //this.cocineroPrueba.start();
+
     }
 
         
