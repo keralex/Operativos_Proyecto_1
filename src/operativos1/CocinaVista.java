@@ -6,6 +6,8 @@
 package operativos1;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import operativos1.Gerente;
 import javax.swing.JTextField;
 
@@ -46,7 +48,7 @@ public class CocinaVista extends javax.swing.JFrame {
     
     // ATRIBUTOS
     
-    Cocina cocina;
+    private Cocina cocina;
     
 
     /**
@@ -55,8 +57,8 @@ public class CocinaVista extends javax.swing.JFrame {
     public CocinaVista() throws IOException {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setVisible(false);
-        this.cocina=new Cocina();
+        this.setVisible(true);
+   
     }
 
     /**
@@ -70,21 +72,13 @@ public class CocinaVista extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
@@ -102,6 +96,20 @@ public class CocinaVista extends javax.swing.JFrame {
         jSpinner3 = new javax.swing.JSpinner();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        CantidadPostres = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        CantidadEntradas = new javax.swing.JTextField();
+        CantidadFuertes = new javax.swing.JTextField();
+        Iniciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1200, 700));
@@ -117,86 +125,31 @@ public class CocinaVista extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(520, 20, 240, 40);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                " Puesto", "Cantidad"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 170, 210, 60);
-
-        jLabel2.setText(" Cantidad Cocineros y mesoneros Activos");
+        jLabel2.setText(" Cantidad de mesoneros");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 100, 220, 30);
+        jLabel2.setBounds(20, 210, 190, 30);
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator1);
         jSeparator1.setBounds(530, 80, 40, 180);
 
-        jLabel3.setText("Cantidad de platos en los mesones");
+        jLabel3.setText("Cant De platos en meson de Postre");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(300, 110, 210, 20);
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Puesto", "Cant Mesones"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
-
-        jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(290, 170, 230, 60);
+        jLabel3.setBounds(270, 170, 210, 20);
         jPanel1.add(jSeparator2);
         jSeparator2.setBounds(20, 300, 1180, 10);
 
         jLabel4.setText("Cantidad de Ordenes atentidas");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(560, 120, 210, 20);
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null}
-            },
-            new String [] {
-                "Cantidad"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable3);
-
-        jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(550, 170, 230, 40);
+        jLabel4.setBounds(540, 120, 210, 20);
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator3);
-        jSeparator3.setBounds(820, 80, 40, 170);
+        jSeparator3.setBounds(800, 90, 40, 170);
 
         jLabel5.setText("Estado de mesonero en jefe y estados");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(850, 120, 210, 20);
-
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Puestos", "Estado"
-            }
-        ));
-        jScrollPane4.setViewportView(jTable4);
-
-        jPanel1.add(jScrollPane4);
-        jScrollPane4.setBounds(840, 170, 230, 60);
 
         jLabel6.setText("Horas Para terminar:");
         jPanel1.add(jLabel6);
@@ -293,6 +246,99 @@ public class CocinaVista extends javax.swing.JFrame {
         jPanel1.add(jComboBox2);
         jComboBox2.setBounds(300, 440, 180, 20);
 
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(190, 210, 50, 20);
+
+        jLabel8.setText(" Cantidad Cocineros de Entrada");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(20, 110, 190, 30);
+
+        jLabel9.setText("Cantidad de cocineros Fuertes");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(20, 140, 190, 30);
+
+        jLabel11.setText(" Cantidad Cocineros de Postres");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(20, 180, 190, 30);
+
+        CantidadPostres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantidadPostresActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CantidadPostres);
+        CantidadPostres.setBounds(460, 170, 50, 20);
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(190, 140, 50, 20);
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(190, 180, 50, 20);
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField7);
+        jTextField7.setBounds(190, 180, 50, 20);
+
+        jLabel13.setText("Cant De platos en meson de Entrada");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(270, 110, 210, 20);
+
+        jLabel14.setText("Cant De platos en meson de Fuerte");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(270, 140, 210, 20);
+
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField10);
+        jTextField10.setBounds(190, 110, 50, 20);
+
+        CantidadEntradas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantidadEntradasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CantidadEntradas);
+        CantidadEntradas.setBounds(460, 110, 50, 20);
+
+        CantidadFuertes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantidadFuertesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CantidadFuertes);
+        CantidadFuertes.setBounds(460, 140, 50, 20);
+
+        Iniciar.setText("Iniciar");
+        Iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IniciarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Iniciar);
+        Iniciar.setBounds(1010, 30, 61, 23);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -335,12 +381,58 @@ public class CocinaVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void CantidadPostresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantidadPostresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantidadPostresActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void CantidadEntradasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantidadEntradasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantidadEntradasActionPerformed
+
+    private void CantidadFuertesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantidadFuertesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantidadFuertesActionPerformed
+
+    private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
+        try {
+            // TODO add your handling code here:
+
+            this.cocina=new Cocina(this.CantidadEntradas,this.CantidadFuertes,this.CantidadPostres);
+        } catch (IOException ex) {
+            Logger.getLogger(CocinaVista.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_IniciarActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CantidadEntradas;
+    private javax.swing.JTextField CantidadFuertes;
+    private javax.swing.JTextField CantidadPostres;
+    private javax.swing.JButton Iniciar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
@@ -350,18 +442,19 @@ public class CocinaVista extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -370,11 +463,12 @@ public class CocinaVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 
 }

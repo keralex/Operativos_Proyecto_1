@@ -18,7 +18,6 @@ public class Operativos1 {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
-        // TODO code application logic here
       //  Cocina cocina=new Cocina();
         CocinaVista vista=new CocinaVista();
         //vista.setVisible(true);

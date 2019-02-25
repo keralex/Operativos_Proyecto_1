@@ -8,6 +8,8 @@ package operativos1;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.IntStream;
+import javax.swing.JTextField;
 
 /**
  *
@@ -21,6 +23,10 @@ public class Cocinero extends Thread {
     private Semaphore SConsumidor;
       private Semaphore SImpresion;
     //atributos
+      
+   private JTextField Text;
+
+   
 
     private Meson mesones;
     private int horaProducion;
@@ -28,11 +34,13 @@ public class Cocinero extends Thread {
     private boolean ejecutar=true;
     private int apuntador;
     private int val;
+    private boolean despedido;
+
 
     
     
     //constructor
-    public Cocinero(Semaphore SP, Semaphore SE, Semaphore SC, float horas, String tipo, Meson meson, int apuntador, int val,Semaphore sI) {
+    public Cocinero(Semaphore SP, Semaphore SE, Semaphore SC, float horas, String tipo, Meson meson, int apuntador, int val,Semaphore sI,JTextField Text) {
                
                 this.SConsumidor=SC;
                 this.SExclusividad=SE;
@@ -43,6 +51,8 @@ public class Cocinero extends Thread {
                 this.apuntador=apuntador;
                 this.val=val;
                 this.SImpresion=sI;
+                this.Text=Text;
+                        
                   
 
     }
@@ -74,8 +84,17 @@ public class Cocinero extends Thread {
               
         System.out.println("Se dejo en el meson");
     }
+    //Actualizar cantidad de platos en los mesones
     
     
+    
+    public void ActualizarMesones()
+    {
+        int cant=IntStream.of(mesones.getMeson()).sum();
+        String num= Integer.toString(cant);
+        Text.setText(num);
+
+    }    
     
     public void esperarSegundos(int segundos) throws InterruptedException{
         try{
@@ -108,6 +127,9 @@ public class Cocinero extends Thread {
            }catch (InterruptedException ex) {
                 Logger.getLogger(Cocinero.class.getName()).log(Level.SEVERE, null, ex);
             }
+           
+           this.ActualizarMesones();
+           
            this.mesones.imprimir();
            SImpresion.release();
                          
